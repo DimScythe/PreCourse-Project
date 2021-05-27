@@ -1,3 +1,5 @@
+//The solution 1, if possible I need some help with them they work but i wanna understand them more.
+
 /**
  * REFERENCES:
  * - String methods: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#
@@ -20,6 +22,15 @@
  */
 function sumOdds(numbers) {
   // Your code here
+  //return numbers.reduce((sum, element) => element  % 2 !== 0 ? sum + element : sum); -> solution 1
+  let sum = 0;
+
+  for (let i = 0; i < numbers.length; i++){
+    if (numbers[i] % 2 !== 0){
+      sum = sum + numbers[i];
+    }
+  }
+  return sum;
 }
 
 // console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
@@ -38,6 +49,18 @@ function sumOdds(numbers) {
  */
 function characterCount(string, c) {
   // Your code here
+  //let counter = 0;
+  //string.split('').forEach((element) => c.toLowerCase() === element.toLowerCase() ? counter++ : counter); -> solution 1
+  //return counter; -> solution 1
+  let counter = 0;
+  let string1 = string.toUpperCase();
+  let string2 = c.toUpperCase();
+  for (let i = 0; i <string.length; i++){
+  if (string1[i] === string2){
+    counter++;
+  }
+}
+return counter;
 }
 
 // console.log(characterCount("Character Count is clever", "c"));
@@ -59,6 +82,14 @@ function characterCount(string, c) {
  */
 function differences(numbers) {
   // Your code here
+  //let myArray = numbers.map((num, i) => numbers[i + 1] - num);
+  //myArray.pop();
+  //return myArray; -> solution 1
+  let arr = [];
+  for (let i = 0; i < numbers.length - 1; i++){
+    arr.push(numbers[i + 1] - numbers[i]);
+  }
+  return arr;
 }
 
 // console.log(differences([11, 35, 52, 14, 56]));
@@ -81,6 +112,14 @@ function differences(numbers) {
  */
 function largestIncrement(numbers) {
   // Your code here
+  //return numbers.reduce((max, num, i) => max > num - numbers[i - 1] ? max : num - numbers[i - 1]); -> solution 1
+  let arr = [];
+  let a;
+  for (let i = 0; i < numbers.length - 1; i++){
+    arr.push(numbers[i + 1] - numbers[i]);
+  }
+  a = Math.max.apply(null, arr);
+  return a;
 }
 
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
@@ -98,6 +137,7 @@ function largestIncrement(numbers) {
  */
 function afterX(numbers, x) {
   // Your code here
+  return numbers.slice(numbers.indexOf(x) + 1);
 }
 
 // console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
@@ -115,6 +155,7 @@ function afterX(numbers, x) {
  */
 function abbreviate(firstName, lastName) {
   // Your code here
+  return firstName[0].toUpperCase() + lastName[0].toUpperCase();
 }
 
 // console.log(abbreviate("miss", "Stephane"));
@@ -131,6 +172,7 @@ function abbreviate(firstName, lastName) {
  */
 function isUpperCase(string) {
   // Your code here
+  return string.split('').reduce((acc, a) => acc && a.toUpperCase() === a);
 }
 
 // console.log(isUpperCase("JCREW"));
@@ -147,6 +189,7 @@ function isUpperCase(string) {
  */
 function elementInArray(numbers, x) {
   // Your code here
+  return numbers.includes(x);
 }
 
 // console.log(elementInArray([5, 6, 7], 8));
@@ -163,6 +206,7 @@ function elementInArray(numbers, x) {
  */
 function reverseString(string) {
   // Your code here
+  return string.split('').reverse().join('');
 }
 
 // console.log(reverseString("CODED"));
