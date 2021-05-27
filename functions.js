@@ -172,7 +172,7 @@ function abbreviate(firstName, lastName) {
  */
 function isUpperCase(string) {
   // Your code here
-  return string.split('').reduce((acc, a) => acc && a.toUpperCase() === a);
+  return string.split('').reduce((acc, a) => acc && a.toUpperCase() === a); //solution 1
 }
 
 // console.log(isUpperCase("JCREW"));
@@ -206,7 +206,7 @@ function elementInArray(numbers, x) {
  */
 function reverseString(string) {
   // Your code here
-  return string.split('').reverse().join('');
+  return string.split('').reverse().join(''); //solution 1
 }
 
 // console.log(reverseString("CODED"));
