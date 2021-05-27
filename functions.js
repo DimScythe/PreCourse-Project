@@ -1,4 +1,4 @@
-//The solution 1, if possible I need some help with them they work but i wanna understand them more.
+///The solution 1, if possible I need some help with them they work but i wanna understand them more.
 
 /**
  * REFERENCES:

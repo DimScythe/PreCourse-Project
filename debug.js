@@ -40,7 +40,7 @@ function noZeroes(numberString) {
   return numberString;
 }
 
-// console.log(noZeroes("001100"));
+/// console.log(noZeroes("001100"));
 
 module.exports = {
   generateIntegersArray,
